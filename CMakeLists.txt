@@ -7,3 +7,8 @@ file(GLOB_RECURSE HEADER_LIST "include/**/*.h")
 add_executable(ProceduralSandbox src/main.cpp ${SOURCES} ${HEADER_LIST})
 
 target_include_directories(ProceduralSandbox PUBLIC include)
+
+source_group(
+  TREE "${PROJECT_SOURCE_DIR}/include"
+  PREFIX "Header Files"
+  FILES ${HEADER_LIST})
