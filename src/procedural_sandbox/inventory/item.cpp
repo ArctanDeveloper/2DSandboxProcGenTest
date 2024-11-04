@@ -1,0 +1,1 @@
+#include <procedural_sandbox/inventory/item.h>
