@@ -121,7 +121,7 @@
 			]
 		},
 		{
-			"name" : "Header Files\\procedural_sandbox",
+			"name" : "Header Files\\procedural_sandbox\\inventory",
 			"sourceIndexes" : 
 			[
 				14,
@@ -175,13 +175,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/procedural_sandbox/inventory.cpp",
+			"path" : "src/procedural_sandbox/inventory/inventory.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/procedural_sandbox/item.cpp",
+			"path" : "src/procedural_sandbox/inventory/item.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -231,12 +231,12 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/procedural_sandbox/inventory.h",
+			"path" : "include/procedural_sandbox/inventory/inventory.h",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/procedural_sandbox/item.h",
+			"path" : "include/procedural_sandbox/inventory/item.h",
 			"sourceGroupIndex" : 2
 		},
 		{
