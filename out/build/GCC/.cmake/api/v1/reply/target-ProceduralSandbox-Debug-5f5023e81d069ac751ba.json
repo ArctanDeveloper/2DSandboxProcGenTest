@@ -65,7 +65,9 @@
 				7,
 				8,
 				9,
-				10
+				10,
+				11,
+				12
 			]
 		}
 	],
@@ -108,41 +110,58 @@
 				7,
 				8,
 				9,
-				10
+				10,
+				11,
+				12
+			]
+		},
+		{
+			"name" : "Header Files\\fast_noise_lite",
+			"sourceIndexes" : 
+			[
+				13
 			]
 		},
 		{
 			"name" : "Header Files\\procedural_sandbox\\entity",
 			"sourceIndexes" : 
 			[
-				11,
-				12,
-				13
+				14,
+				15,
+				16
 			]
 		},
 		{
 			"name" : "Header Files\\procedural_sandbox\\inventory",
 			"sourceIndexes" : 
 			[
-				14,
-				15
+				17,
+				18
 			]
 		},
 		{
 			"name" : "Header Files\\procedural_sandbox\\util",
 			"sourceIndexes" : 
 			[
-				16
+				19,
+				20
 			]
 		},
 		{
 			"name" : "Header Files\\procedural_sandbox\\world",
 			"sourceIndexes" : 
 			[
-				17,
-				18,
-				19,
-				20
+				21,
+				22,
+				23,
+				24
+			]
+		},
+		{
+			"name" : "Header Files\\sago",
+			"sourceIndexes" : 
+			[
+				25
 			]
 		}
 	],
@@ -193,6 +212,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "src/procedural_sandbox/util/vec.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "src/procedural_sandbox/world/chunk.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -216,53 +241,74 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/procedural_sandbox/entity/entity.h",
+			"compileGroupIndex" : 0,
+			"path" : "src/sago/platform_folders.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/fast_noise_lite/FastNoiseLite.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/procedural_sandbox/entity/entity.h",
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
 			"path" : "include/procedural_sandbox/entity/npc.h",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
 			"path" : "include/procedural_sandbox/entity/player.h",
-			"sourceGroupIndex" : 1
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 1,
 			"path" : "include/procedural_sandbox/inventory/inventory.h",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "include/procedural_sandbox/inventory/item.h",
-			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 1,
-			"path" : "include/procedural_sandbox/util/serializer.h",
 			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 1,
-			"path" : "include/procedural_sandbox/world/chunk.h",
+			"path" : "include/procedural_sandbox/inventory/item.h",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/procedural_sandbox/util/serializer.h",
 			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/procedural_sandbox/util/vec.h",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/procedural_sandbox/world/chunk.h",
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 1,
 			"path" : "include/procedural_sandbox/world/tile.h",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 1,
 			"path" : "include/procedural_sandbox/world/tile_entity.h",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		},
 		{
 			"backtrace" : 1,
 			"path" : "include/procedural_sandbox/world/world.h",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 1,
+			"path" : "include/sago/platform_folders.h",
+			"sourceGroupIndex" : 6
 		}
 	],
 	"type" : "EXECUTABLE"

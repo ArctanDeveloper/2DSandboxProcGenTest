@@ -1,11 +1,14 @@
 #ifndef TILE_H
 #define TILE_H
 #include <stdint.h>
+#include <vector>
 
 namespace ProceduralSandbox::World {
-    typedef uint16_t Tile;
+    struct Tile {
+        uint32_t id;
+        uint64_t data;
 
-    namespace Tile {
-    }
+        Tile();
+    };
 }
 #endif
