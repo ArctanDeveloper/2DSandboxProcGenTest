@@ -61,6 +61,38 @@ int main() {
         quit = true;
     }), {});
 
+    commandHandler.AddCommand(Command("screen", "Gets the screen.", [&](const CommandHandler& handler, const std::vector<Parameter>& parameters) {
+        switch (screenStack.top()) {
+            case ScreenType::Inventory:
+                std::cout << "Screen is: Inventory" << std::endl;
+                break;
+            case ScreenType::Crafting:
+                std::cout << "Screen is: Crafting" << std::endl;
+                break;
+            case ScreenType::InspectionLog:
+                std::cout << "Screen is: Inspection Log" << std::endl;
+                break;
+            case ScreenType::ItemInspectionLog:
+                std::cout << "Screen is: Item Inspection Log" << std::endl;
+                break;
+            case ScreenType::TileInspectionLog:
+                std::cout << "Screen is: Tile Inspection Log" << std::endl;
+                break;
+            case ScreenType::RecipeInspectionLog:
+                std::cout << "Screen is: Recipe Inspection Log" << std::endl;
+                break;
+            case ScreenType::Game:
+                std::cout << "Screen is: Game" << std::endl;
+                break;
+            case ScreenType::MainMenu:
+                std::cout << "Screen is: Main Menu" << std::endl;
+                break;
+            default:
+                std::cout << "Not a valid command for this screen." << std::endl;
+                break;
+        }
+    }), {});
+
     commandHandler.AddCommand(Command("help", [&](const CommandHandler& handler, const std::vector<Parameter>& parameters) {
         std::cout << "Available commands:" << std::endl;
         for (Command command : handler.commands) {
@@ -134,6 +166,8 @@ int main() {
         switch (screenStack.top()) {
             case ScreenType::Game:
                 screenStack.push(ScreenType::Inventory);
+
+                
                 break;
             default:
                 std::cout << "Not a valid command for this screen." << std::endl;
