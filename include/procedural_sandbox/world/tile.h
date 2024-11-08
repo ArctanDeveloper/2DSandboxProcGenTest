@@ -5,7 +5,7 @@
 
 namespace ProceduralSandbox::World {
     struct Tile {
-        uint32_t id;
+        uint64_t id;
         uint64_t data;
 
         Tile();

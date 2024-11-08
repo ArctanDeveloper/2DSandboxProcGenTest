@@ -52,6 +52,9 @@
         "cstring": "cpp",
         "map": "cpp",
         "cinttypes": "cpp",
-        "filesystem": "cpp"
-    }
+        "filesystem": "cpp",
+        "stack": "cpp",
+        "variant": "cpp"
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
 }
