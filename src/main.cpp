@@ -17,6 +17,7 @@ using ProceduralSandbox::Command::Command;
 using ProceduralSandbox::Command::CommandHandler;
 using ProceduralSandbox::Command::Parameter;
 using ProceduralSandbox::Command::ParameterType;
+using ProceduralSandbox::Command::ParameterValue;
 
 enum ScreenType {
     MainMenu,
@@ -66,6 +67,29 @@ int main() {
             std::cout << "\t" << command.name << ": " << command.description << std::endl;
         }
     }), {});
+
+    commandHandler.AddCommand(Command("select", [&](const CommandHandler& handler, const std::vector<Parameter>& parameters) {
+        switch (screenStack.top()) {
+            case ScreenType::ItemInspectionLog:
+                if (world.ItemTypes.size() > std::get<int>(parameters[0])) {
+                    std::cout << "You selected: " << world.ItemTypes[std::get<int>(parameters[0])]->name << std::endl;
+                }
+                break;
+            case ScreenType::TileInspectionLog:
+                if (world.TileTypes.size() > std::get<int>(parameters[0])) {
+                    std::cout << "You selected: " << world.TileTypes[std::get<int>(parameters[0])]->name << std::endl;
+                }
+                break;
+            case ScreenType::RecipeInspectionLog:
+                if (world.Recipes.size() > std::get<int>(parameters[0])) {
+                    std::cout << "You selected: " << world.Recipes[std::get<int>(parameters[0])]->inputs.size() << std::endl;
+                }
+                break;
+            default:
+                std::cout << "Not a valid command for this screen." << std::endl;
+                break;
+        }
+    }), {ParameterValue(ParameterType::INT, true)});
 
     commandHandler.AddCommand(Command("back", [&](const CommandHandler& handler, const std::vector<Parameter>& parameters) {
         switch (screenStack.top()) {
@@ -200,10 +224,6 @@ int main() {
         tokens.erase(tokens.begin());
 
         commandHandler.ExecuteCommand(initializer, tokens);
-
-        if (line == "quit_game") {
-            quit = true;
-        }
     }
 
     std::cout << "Finished running." << std::endl;

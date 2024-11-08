@@ -33,5 +33,13 @@
             "displayName": "",
             "configurePreset": "Clang"
         }
+    ],
+    "packagePresets": [
+        {
+            "name": "Clang",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "Clang"
+        }
     ]
 }
