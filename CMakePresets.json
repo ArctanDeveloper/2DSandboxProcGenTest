@@ -25,5 +25,13 @@
                 "CMAKE_BUILD_TYPE": "Debug"
             }
         }
+    ],
+    "testPresets": [
+        {
+            "name": "Clang",
+            "description": "",
+            "displayName": "",
+            "configurePreset": "Clang"
+        }
     ]
 }

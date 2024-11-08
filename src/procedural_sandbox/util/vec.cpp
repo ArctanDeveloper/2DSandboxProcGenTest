@@ -69,6 +69,10 @@ bool Vec2f::operator==(const Vec2f &other) const {
     return x == other.x && y == other.y;
 }
 
+bool Vec2f::operator==(const Vec2i &other) const {
+    return x == other.x && y == other.y;
+}
+
 float Vec2f::Magnitude() const {
     return sqrtf(x * x + y * y);
 }
@@ -79,10 +83,6 @@ Vec2f Vec2f::Normalize() const {
         return Vec2f(0.0f, 0.0f);
     }
     return Vec2f(x, y) / magnitude;
-}
-
-Vec2f Vec2f::VectorTo(const Vec2f &other) const {
-    return other - *this;
 }
 
 std::size_t Vec2f::Hash::operator()(const Vec2f& vec) const {
@@ -166,20 +166,20 @@ bool Vec2i::operator==(const Vec2i &other) const {
     return x == other.x && y == other.y;
 }
 
-int Vec2i::Magnitude() const {
-    return (int)(sqrt(x * x + y * y) + 0.5f);
+bool Vec2i::operator==(const Vec2f &other) const {
+    return x == other.x && y == other.y;
 }
 
-Vec2i Vec2i::Normalize() const {
+float Vec2i::Magnitude() const {
+    return sqrt(x * x + y * y);
+}
+
+Vec2f Vec2i::Normalize() const {
     int magnitude = Magnitude();
     if (magnitude == 0) {
-        return Vec2i(0, 0);
+        return Vec2f(0, 0);
     }
-    return Vec2i(x, y) / magnitude;
-}
-
-Vec2i Vec2i::VectorTo(const Vec2i &other) const {
-    return other - *this;
+    return Vec2f(x, y) / magnitude;
 }
 
 std::size_t Vec2i::Hash::operator()(const Vec2i& vec) const {
