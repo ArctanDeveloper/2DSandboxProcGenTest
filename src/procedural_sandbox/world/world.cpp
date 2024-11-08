@@ -30,14 +30,14 @@ World::World() {
         TileTypes.push_back(std::make_unique<TileType>());
 
         TileType* tileType = TileTypes.back().get();
-        tileType->name = "Tile " + i;
+        tileType->name = "Tile " + std::to_string(i);
     }
 
     for (int i = 0; i < World::ITEM_TYPES; i++) {
         ItemTypes.push_back(std::make_unique<ItemType>());
 
         ItemType* itemType = ItemTypes.back().get();
-        itemType->name = "Item " + i;
+        itemType->name = "Item " + std::to_string(i);
     }
 
     for (int i = 0; i < World::RECIPE_TYPES; i++) {
